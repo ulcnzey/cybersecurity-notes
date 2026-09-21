@@ -1,4 +1,4 @@
-Siber Saldırı Türleri
+#Siber Saldırı Türleri
 
 Bu bölümde temel siber saldırı türlerini; ne oldukları, genel olarak nasıl çalıştıkları, hedefleri, nasıl fark edilebilecekleri ve temel korunma yöntemleri açısından inceledim.
 
