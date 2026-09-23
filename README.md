@@ -1,78 +1,71 @@
 # 🛡️ Cybersecurity Notes
 
-> **Siber güvenlik alanında temel bilgilerden profesyonel güvenlik çalışmalarına doğru ilerleyen kişisel öğrenme ve araştırma arşivim.**
+> Siber güvenlik alanında temel kavramlardan uygulamalı güvenlik analizlerine doğru ilerleyen kişisel öğrenme, araştırma ve laboratuvar arşivim.
 
-Bu repository, **Adli Bilişim Mühendisliği** eğitimim ve siber güvenlik alanındaki kariyer hedeflerim doğrultusunda oluşturduğum kişisel çalışma alanıdır.
+Bu repository, **Fırat Üniversitesi Adli Bilişim Mühendisliği** eğitimim ve siber güvenlik alanında kendimi geliştirme sürecim boyunca öğrendiğim konuları, yaptığım araştırmaları ve uygulamalı laboratuvar çalışmalarını düzenli şekilde dokümante ettiğim teknik çalışma alanıdır.
 
-Burada siber güvenliğin temel kavramlarını yalnızca tanımlamak yerine, kavramların birbirleriyle olan ilişkilerini anlamaya ve öğrendiklerimi kendi cümlelerimle dokümante etmeye çalışıyorum.
-
-Amacım zaman içerisinde bu repository'yi;
-
-* 📚 Öğrenme notlarım
-* 🔐 Siber güvenlik araştırmalarım
-* 🌐 Ağ ve web güvenliği çalışmalarım
-* 🛡️ SOC / Blue Team öğrenme sürecim
-* 🔎 Güvenlik analizi çalışmalarım
-* 🧪 İleride gerçekleştireceğim laboratuvar ve projeler
-
-için düzenli ve sürdürülebilir bir teknik arşive dönüştürmek.
+Amacım yalnızca teorik bilgileri biriktirmek değil; öğrendiğim kavramları **araştırmak, uygulamak, analiz etmek ve dokümante ederek** zaman içerisinde sürdürülebilir bir teknik portföye dönüştürmek.
 
 ---
 
-## 🎯 Bu Repository'nin Amacı
+## 🎯 Repository'nin Amacı
 
-Siber güvenlik çok geniş bir alan olduğu için öğrenme sürecimi belirli bir sıraya göre ilerletiyorum.
+Siber güvenlik çok geniş bir alan olduğu için öğrenme sürecimi temel kavramlardan başlayarak teknik ve uygulamalı çalışmalara doğru ilerletiyorum.
 
-Öncelikle temel kavramları öğreniyor, ardından ağ, web, güvenlik mekanizmaları, SOC ve güvenlik operasyonları gibi alanlara geçiyorum.
-
-Öğrenme yaklaşımım:
+Temel yaklaşımım:
 
 ```text
 Temel Kavramlar
       ↓
-Ağ Temelleri
+Networking
       ↓
-Siber Saldırılar
+Linux / Windows
       ↓
-Güvenlik Mekanizmaları
+Web Technologies
       ↓
-Web Güvenliği
+Cybersecurity Fundamentals
       ↓
-SOC & Blue Team
+Security Analysis
       ↓
-Güvenlik Ekipleri
+Vulnerability Assessment
       ↓
-Uzmanlık Alanları
+SOC / Blue Team
       ↓
-Zafiyetler
+Web & Application Security
       ↓
-Etik ve Yetkilendirme
+Cloud Security
       ↓
-Uygulama / Laboratuvar / Projeler
+Digital Forensics
+      ↓
+Security Projects
 ```
 
-Bu repository'nin temel amacı yalnızca bilgi biriktirmek değil, **öğrenilen bilgiyi düzenli şekilde dokümante etmek ve zaman içerisindeki gelişimi takip edebilmek.**
+Bu repository'de özellikle şu konulara odaklanıyorum:
+
+* 🔐 Cybersecurity Fundamentals
+* 🌐 Network Security
+* 🐧 Linux Security
+* 🕸️ Web Security
+* 🔎 Vulnerability Assessment
+* 🛡️ SOC / Blue Team
+* ☁️ Cloud Security
+* 📱 Mobile Security
+* 🧪 Security Labs
+* 🔬 Digital Forensics
+* ⚙️ Security Automation
 
 ---
 
 # 📚 İçerik
 
-## 01 — Temel Kavramlar
+## 01 — Cybersecurity Fundamentals
 
 Siber güvenliğin temelini oluşturan kavramlar.
-
-* [Siber Güvenlik Nedir?](01-fundamentals/what-is-cybersecurity.md)
-* [CIA Triad](01-fundamentals/cia-triad.md)
-* [Threat, Vulnerability ve Risk](01-fundamentals/threat-vulnerability-risk.md)
-
-### Öğrenilen temel kavramlar
 
 * Cybersecurity
 * Information Security
 * Network Security
-* Confidentiality
-* Integrity
-* Availability
+* CIA Triad
 * Threat
 * Vulnerability
 * Risk
@@ -80,17 +73,13 @@ Siber güvenliğin temelini oluşturan kavramlar.
 * Exploit
 * Impact
 
+📁 [`01-fundamentals/`](./01-fundamentals/)
+
 ---
 
-## 02 — Saldırı Türleri ve Malware
+## 02 — Attacks & Malware
 
-Yaygın siber saldırı yöntemleri ve zararlı yazılım kavramları.
-
-* [Siber Saldırı Türleri](02-attacks/attack-types.md)
-* [Network Attacks](02-attacks/network-attacks.md)
-* [Malware Türleri](02-attacks/malware.md)
-
-### Çalışılan konular
+Yaygın saldırı türleri ve zararlı yazılım kavramları.
 
 * DoS / DDoS
 * Brute Force
@@ -104,38 +93,23 @@ Yaygın siber saldırı yöntemleri ve zararlı yazılım kavramları.
 * Directory Traversal
 * File Inclusion
 * Phishing
-* Spear Phishing
-* Whaling
 * Social Engineering
-* BEC
-* Virus
-* Worm
-* Trojan
-* Ransomware
-* Spyware
-* Keylogger
-* Rootkit
-* Botnet
+* Malware Types
 
-> Bu bölümde saldırıların yalnızca nasıl çalıştığı değil, temel belirtileri ve korunma yöntemleri de incelenmektedir.
+📁 [`02-attacks/`](./02-attacks/)
 
 ---
 
-## 03 — Ağ Temelleri
+## 03 — Networking
 
-Siber güvenliğin temelini oluşturan ağ kavramları.
-
-* [Ağ Temelleri](03-networking/network-basics.md)
-* [Portlar ve Protokoller](03-networking/ports-protocols.md)
-
-### Çalışılan konular
+Siber güvenlik için gerekli ağ temelleri.
 
 * IP Address
 * MAC Address
 * IPv4 / IPv6
 * TCP / UDP
-* Port
-* Protocol
+* Ports
+* Protocols
 * Router
 * Switch
 * Firewall
@@ -146,110 +120,71 @@ Siber güvenliğin temelini oluşturan ağ kavramları.
 * HTTP / HTTPS
 * SSH
 
-Ayrıca bir kullanıcının tarayıcıya:
-
-```text
-https://example.com
-```
-
-yazmasından web sayfasının görüntülenmesine kadar gerçekleşen temel ağ süreci incelenmektedir.
+📁 [`03-networking/`](./03-networking/)
 
 ---
 
-## 04 — Güvenlik Temelleri
+## 04 — Security Fundamentals
 
 Sistem ve kullanıcı güvenliğinde kullanılan temel mekanizmalar.
-
-* [Firewall](04-security/firewall.md)
-* [Authentication ve Authorization](04-security/authentication-authorization.md)
-* [Cryptography Basics](04-security/cryptography-basics.md)
-
-### Çalışılan konular
 
 * Firewall
 * Authentication
 * Authorization
-* MFA
-* 2FA
-* Password Policy
+* MFA / 2FA
+* Password Security
 * Least Privilege
 * Encryption
-* Decryption
-* Hash
+* Hashing
 * Salt
 * Symmetric Encryption
 * Asymmetric Encryption
 * Digital Signature
-* Certificate
+* Certificates
+
+📁 [`04-security/`](./04-security/)
 
 ---
 
-## 05 — Web Güvenliği
+## 05 — Web Security
 
 Web uygulamalarının çalışma mantığı ve güvenlik açısından önemli temel kavramlar.
 
-* [Web Güvenliğine Giriş](05-web-security/web-basics.md)
-
-### Çalışılan konular
-
-* Client
-* Server
-* Request
-* Response
-* Cookie
-* Session
-* Token
-* API
-* Endpoint
+* Client / Server
+* HTTP Request / Response
+* Cookies
+* Sessions
+* Tokens
+* APIs
+* Endpoints
 * HTTP Headers
 * HTTP Status Codes
+* Authentication / Authorization
 
-### HTTP Status Codes
-
-```text
-200 → OK
-201 → Created
-301 → Moved Permanently
-302 → Found
-400 → Bad Request
-401 → Unauthorized
-403 → Forbidden
-404 → Not Found
-500 → Internal Server Error
-```
-
-Özellikle **401 Authentication** ile **403 Authorization** arasındaki fark incelenmektedir.
+📁 [`05-web-security/`](./05-web-security/)
 
 ---
 
-## 06 — SOC ve Güvenlik Operasyonları
+## 06 — SOC & Security Operations
 
-Siber güvenlik operasyonlarının temel çalışma mantığı.
-
-* [SOC Nedir?](06-soc/soc.md)
-
-### Çalışılan konular
+Güvenlik operasyonlarının temel çalışma mantığı.
 
 * SOC
 * SOC Analyst
 * SIEM
-* Log
-* Alert
-* Incident
+* Logs
+* Alerts
+* Incidents
 * Incident Response
 * Threat Intelligence
 
-Ayrıca şüpheli giriş senaryoları üzerinden bir SOC analistinin hangi log ve güvenlik verilerini inceleyebileceği değerlendirilmektedir.
+📁 [`06-soc/`](./06-soc/)
 
 ---
 
 ## 07 — Security Teams
 
-Saldırı ve savunma ekiplerinin görevleri.
-
-* [Red Team, Blue Team ve Purple Team](07-security-teams/red-blue-purple-team.md)
-
-### İncelenen konular
+Siber güvenlik ekiplerinin görevleri ve çalışma modelleri.
 
 * Red Team
 * Blue Team
@@ -259,17 +194,13 @@ Saldırı ve savunma ekiplerinin görevleri.
 * Defense
 * Incident Response
 
-Amaç, saldırı perspektifi ile savunma perspektifinin nasıl birlikte çalıştığını anlamaktır.
+📁 [`07-security-teams/`](./07-security-teams/)
 
 ---
 
-## 08 — Siber Güvenlikte Uzmanlık Alanları
+## 08 — Cybersecurity Specializations
 
-Siber güvenliğin tek bir meslekten oluşmadığını ve farklı uzmanlık alanlarının bulunduğunu inceliyorum.
-
-* [Siber Güvenlikte Uzmanlık Alanları](08-specializations/cybersecurity-domains.md)
-
-### İncelenen alanlar
+Siber güvenlik içerisindeki farklı uzmanlık alanlarını inceliyorum.
 
 * Network Security
 * SOC / Blue Team
@@ -284,7 +215,7 @@ Siber güvenliğin tek bir meslekten oluşmadığını ve farklı uzmanlık alan
 * Threat Intelligence
 * Security Engineering
 
-Bu bölüm aynı zamanda hangi alanların hangi teknik altyapıya ihtiyaç duyduğunu anlamama yardımcı oluyor.
+📁 [`08-specializations/`](./08-specializations/)
 
 ---
 
@@ -292,12 +223,7 @@ Bu bölüm aynı zamanda hangi alanların hangi teknik altyapıya ihtiyaç duydu
 
 Güvenlik açıklarının tanımlanması ve teknik olarak değerlendirilmesi.
 
-* [CVE ve CVSS](09-vulnerabilities/cve-cvss.md)
-
-### Çalışılan konular
-
 * CVE
-* CVE ID
 * CVSS
 * Vulnerability Severity
 * Exploitability
@@ -305,23 +231,29 @@ Güvenlik açıklarının tanımlanması ve teknik olarak değerlendirilmesi.
 * Integrity
 * Availability
 
-Önemli ayrım:
+Temel ayrım:
 
 ```text
-CVE  → Güvenlik açığının kimliği
-CVSS → Teknik önem/severity değerlendirmesi
-Risk → Ortama ve kuruma göre gerçek risk
+CVE
+↓
+Güvenlik açığının kimliği
+
+CVSS
+↓
+Teknik önem / severity değerlendirmesi
+
+Risk
+↓
+Ortam ve sistem bağlamındaki gerçek risk
 ```
+
+📁 [`09-vulnerabilities/`](./09-vulnerabilities/)
 
 ---
 
-## 10 — Etik ve Yetkilendirme
+## 10 — Ethics & Authorization
 
-Siber güvenlik çalışmalarında izin, kapsam ve sorumlu davranış.
-
-* [Siber Güvenlikte Etik ve Yetki](10-ethics/authorization.md)
-
-### Çalışılan konular
+Siber güvenlik çalışmalarında yetki, kapsam ve sorumlu davranış.
 
 * Authorized Testing
 * Unauthorized Access
@@ -330,19 +262,144 @@ Siber güvenlik çalışmalarında izin, kapsam ve sorumlu davranış.
 * Scope
 * Rules of Engagement
 
-Temel prensip:
+> Teknik olarak erişebilmek, o sistemi test etme yetkisine sahip olmak anlamına gelmez.
 
-> **Teknik olarak erişebilmek, o sistemi test etme yetkisine sahip olmak anlamına gelmez.**
+📁 [`10-ethics/`](./10-ethics/)
+
+---
+
+# 🧪 Uygulamalı Çalışmalar
+
+Teorik temellerin ardından kontrollü laboratuvar ortamlarında uygulamalı çalışmalar yapmaya başladım.
+
+---
+
+## Day 2 — Kali Linux & Local Network Security
+
+Kali Linux kurulumu ve izole bir yerel ağ üzerinde temel ağ keşfi ve güvenlik taraması çalışmaları.
+
+### Çalışılan konular
+
+* Kali Linux temel kullanımı
+* Linux ağ komutları
+* IP adresi ve interface kontrolü
+* Local network discovery
+* Port scanning
+* Service discovery
+* Temel güvenlik değerlendirmesi
+
+### Proje
+
+🔗 **Local Network Security Scanner**
+
+📁 [`day-02-kali-linux/`](./day-02-kali-linux/)
+
+---
+
+# 🔬 Day 3 — Metasploitable 2 Security Assessment
+
+Bu çalışma kapsamında kasıtlı olarak zayıf bırakılmış **Metasploitable 2** sanal makinesi üzerinde kontrollü bir güvenlik değerlendirmesi gerçekleştirilmiştir.
+
+Laboratuvar tamamen izole bir VirtualBox **Internal Network** üzerinde kurulmuştur.
+
+### Lab Network
+
+```text
+Kali Linux
+192.168.56.10
+      │
+      │  cyber-lab
+      │
+      ▼
+Metasploitable 2
+192.168.56.20
+```
+
+### Kullanılan temel araçlar
+
+* Nmap
+* Nmap NSE
+* Nikto
+* SearchSploit
+* curl
+* ping
+* Linux networking tools
+
+### Çalışılan güvenlik değerlendirme süreci
+
+```text
+Reconnaissance
+      ↓
+Scanning
+      ↓
+Enumeration
+      ↓
+Service & Version Analysis
+      ↓
+Vulnerability Research
+      ↓
+Risk Assessment
+      ↓
+Security Recommendations
+      ↓
+Reporting
+```
+
+### İncelenen başlıklar
+
+* Metasploitable 2
+* Attack Surface
+* Network Discovery
+* Service & Version Detection
+* FTP Analysis
+* HTTP Analysis
+* SMB / Samba Analysis
+* Nmap NSE
+* Nikto
+* SearchSploit
+* CVE Research
+* Risk Assessment
+* Defense Perspective
+* Attack Chain
+* Mini Penetration Test Report
+
+📁 [`day-03-metasploitable-2/`](./day-03-metasploitable-2/)
+
+### Önemli değerlendirme
+
+Bu laboratuvarda özellikle şu ayrımlar üzerinde durulmuştur:
+
+```text
+Open Port
+    ≠
+Vulnerability
+
+Vulnerability
+    ≠
+Confirmed Exploitability
+
+CVE
+    ≠
+Exploit
+
+CVSS
+    ≠
+Real-World Risk
+```
+
+Bir güvenlik bulgusunun gerçek önemini değerlendirmek için servis, sürüm, yapılandırma, erişim durumu, sistemin kritiklik seviyesi ve olası etki birlikte ele alınmıştır.
+
+> Tüm uygulamalı çalışmalar yalnızca yetkili ve izole laboratuvar ortamında gerçekleştirilmiştir.
 
 ---
 
 # 🧭 Öğrenme Yaklaşımım
 
-Bu repository'deki çalışmalarımı mümkün olduğunca şu sırayla ilerletiyorum:
+Çalışmalarımı mümkün olduğunca şu yöntemle ilerletiyorum:
 
 ### 1. Kavramı öğren
 
-Önce kavramın ne olduğunu anlamaya çalışıyorum.
+Önce konunun ne olduğunu ve neden önemli olduğunu anlamaya çalışıyorum.
 
 ### 2. Kavramlar arasındaki ilişkiyi kur
 
@@ -350,112 +407,135 @@ Bu repository'deki çalışmalarımı mümkün olduğunca şu sırayla ilerletiy
 
 ```text
 Threat
-  +
+   +
 Vulnerability
-  ↓
+   ↓
 Risk
-  ↓
+   ↓
 Attack
-  ↓
+   ↓
 Impact
 ```
 
-gibi kavramlar arasındaki bağlantıyı anlamaya çalışıyorum.
+gibi kavramların birbirleriyle ilişkisini anlamaya çalışıyorum.
 
-### 3. Gerçek senaryolarla düşün
+### 3. Teknik olarak uygula
 
-Öğrendiğim kavramları şirket, web uygulaması, kullanıcı hesabı, ağ veya SOC senaryoları üzerinden değerlendirmeye çalışıyorum.
+Öğrendiğim kavramları kontrollü ve yetkili laboratuvar ortamlarında uyguluyorum.
 
-### 4. Dokümante et
+### 4. Sonuçları analiz et
 
-Öğrendiklerimi kendi cümlelerimle Markdown dosyalarına aktarıyorum.
+Bir aracın çıktısını yalnızca almak yerine, çıktının ne anlama geldiğini değerlendirmeye çalışıyorum.
 
-### 5. Uygulamaya geç
+### 5. Dokümante et
 
-Temel bilgiler oturduktan sonra laboratuvarlar, güvenlik araçları ve kontrollü uygulamalarla pratiğe geçmeyi hedefliyorum.
+Öğrendiklerimi ve yaptığım çalışmaları kendi cümlelerimle Markdown dosyalarına aktarıyorum.
+
+### 6. Savunma perspektifinden değerlendir
+
+Bir güvenlik probleminin nasıl oluştuğunun yanında, nasıl önlenebileceğini ve tespit edilebileceğini de incelemeye çalışıyorum.
 
 ---
 
-# 🛠️ Şu Anki Teknik Odak Alanlarım
+# 🛠️ Teknik Odak Alanlarım
 
-Siber güvenlik öğrenme sürecimde özellikle şu alanlara temel oluşturuyorum:
+Şu aşamada özellikle aşağıdaki alanlarda temel oluşturmaya çalışıyorum:
 
 ```text
 Networking
-    ↓
+     ↓
 Linux / Windows
-    ↓
+     ↓
 Web Technologies
-    ↓
+     ↓
 Cybersecurity Fundamentals
-    ↓
+     ↓
+Security Analysis
+     ↓
+Vulnerability Assessment
+     ↓
 SOC / Blue Team
-    ↓
+     ↓
 Web & Application Security
-    ↓
+     ↓
 Cloud Security
-    ↓
+     ↓
 Digital Forensics
 ```
 
-İlerleyen aşamalarda bu alanları uygulamalı çalışmalar ve projelerle desteklemeyi planlıyorum.
+İlerleyen çalışmalarla bu alanları uygulamalı laboratuvarlar ve teknik projelerle desteklemeyi hedefliyorum.
 
 ---
 
 # 📈 Öğrenme Yol Haritası
 
-Bu repository zaman içerisinde gelişen bir çalışma alanıdır.
-
 ### ✅ Aşama 1 — Temel Bilgiler
 
-* [x] Cybersecurity Fundamentals
-* [x] CIA Triad
-* [x] Threat / Vulnerability / Risk
-* [x] Attack Concepts
-* [x] Malware
-* [x] Networking Fundamentals
-* [x] Ports & Protocols
-* [x] Firewall
-* [x] Authentication & Authorization
-* [x] Cryptography Basics
-* [x] Web Security Basics
-* [x] SOC Fundamentals
-* [x] Red / Blue / Purple Team
-* [x] Cybersecurity Domains
-* [x] CVE / CVSS
-* [x] Ethics & Authorization
-* [x] General Review
+* Cybersecurity Fundamentals
+* CIA Triad
+* Threat / Vulnerability / Risk
+* Attack Concepts
+* Malware
+* Networking Fundamentals
+* Ports & Protocols
+* Firewall
+* Authentication & Authorization
+* Cryptography Basics
+* Web Security Basics
+* SOC Fundamentals
+* Red / Blue / Purple Team
+* Cybersecurity Domains
+* CVE / CVSS
+* Ethics & Authorization
 
-### 🔄 Aşama 2 — Teknik Temeller
+### ✅ Aşama 2 — İlk Uygulamalı Çalışmalar
 
-* [ ] Linux Fundamentals
-* [ ] Windows Security Fundamentals
-* [ ] Advanced Networking
-* [ ] TCP/IP Deep Dive
-* [ ] DNS Security
-* [ ] HTTP/HTTPS Deep Dive
-* [ ] Active Directory Fundamentals
-* [ ] Authentication Protocols
-* [ ] Security Monitoring
+* Kali Linux
+* Linux Networking
+* Local Network Discovery
+* Nmap
+* Service Enumeration
+* Metasploitable 2
+* Nmap NSE
+* Nikto
+* SearchSploit
+* CVE Research
+* Vulnerability Assessment
+* Risk Assessment
+* Security Reporting
 
-### 🔄 Aşama 3 — Uygulamalı Siber Güvenlik
+### 🔄 Aşama 3 — Teknik Temeller
 
-* [ ] Security Labs
-* [ ] Log Analysis
-* [ ] SIEM Practice
-* [ ] Network Traffic Analysis
-* [ ] Web Security Labs
-* [ ] Vulnerability Analysis
-* [ ] Incident Response Scenarios
-* [ ] Threat Intelligence Exercises
+* Linux Security
+* Windows Security
+* Advanced Networking
+* TCP/IP Deep Dive
+* DNS Security
+* HTTP / HTTPS Deep Dive
+* Active Directory Fundamentals
+* Authentication Protocols
+* Security Monitoring
 
-### 🔄 Aşama 4 — Projeler
+### 🔄 Aşama 4 — Uygulamalı Siber Güvenlik
 
-* [ ] Security Monitoring Project
-* [ ] Log Analysis Project
-* [ ] Vulnerability Analysis Project
-* [ ] Security Automation Project
-* [ ] Digital Forensics Project
+* Security Labs
+* Log Analysis
+* SIEM Practice
+* Network Traffic Analysis
+* Web Security Labs
+* Vulnerability Analysis
+* Incident Response
+* Threat Intelligence
+* Detection Engineering
+
+### 🔄 Aşama 5 — Teknik Projeler
+
+* Security Monitoring Project
+* Log Analysis Project
+* Vulnerability Analysis Project
+* Security Automation Project
+* Digital Forensics Project
+* Security-focused Application Projects
 
 ---
 
@@ -467,41 +547,41 @@ cybersecurity-notes/
 ├── README.md
 │
 ├── 01-fundamentals/
-│   ├── what-is-cybersecurity.md
-│   ├── cia-triad.md
-│   └── threat-vulnerability-risk.md
-│
 ├── 02-attacks/
-│   ├── attack-types.md
-│   ├── network-attacks.md
-│   └── malware.md
-│
 ├── 03-networking/
-│   ├── network-basics.md
-│   └── ports-protocols.md
-│
 ├── 04-security/
-│   ├── firewall.md
-│   ├── authentication-authorization.md
-│   └── cryptography-basics.md
-│
 ├── 05-web-security/
-│   └── web-basics.md
-│
 ├── 06-soc/
-│   └── soc.md
-│
 ├── 07-security-teams/
-│   └── red-blue-purple-team.md
-│
 ├── 08-specializations/
-│   └── cybersecurity-domains.md
-│
 ├── 09-vulnerabilities/
-│   └── cve-cvss.md
+├── 10-ethics/
 │
-└── 10-ethics/
-    └── authorization.md
+├── 11-general-review/
+│
+├── day-02-kali-linux/
+│
+└── day-03-metasploitable-2/
+    ├── 01-metasploitable-2.md
+    ├── 02-lab-network-setup.md
+    ├── 03-network-discovery.md
+    ├── 04-attack-surface-analysis.md
+    ├── 05-service-version-research.md
+    ├── 06-vulnerability-research.md
+    ├── 07-ftp-analysis.md
+    ├── 08-http-analysis.md
+    ├── 09-smb-samba-analysis.md
+    ├── 10-nmap-nse-analysis.md
+    ├── 11-tools-research.md
+    ├── 12-searchsploit-analysis.md
+    ├── 13-risk-assessment.md
+    ├── 14-mini-pentest-report.md
+    ├── 15-defense-perspective.md
+    ├── 16-attack-chain.md
+    ├── 17-review-questions.md
+    ├── 18-review-questions.md
+    │
+    └── screenshots/
 ```
 
 ---
@@ -519,34 +599,37 @@ Araştırmalarımda mümkün olduğunca güvenilir ve teknik kaynaklardan yararl
 * Microsoft Security
 * Google Cloud Security
 * Cisco Security
-* Üniversitelerin ve güvenlik kuruluşlarının teknik dokümantasyonları
+* Üniversitelerin teknik kaynakları
+* Güvenlik araçlarının resmi dokümantasyonları
 
 gibi kaynakları temel alıyorum.
 
-Her konu için yalnızca tanım ezberlemek yerine, kavramın **neden önemli olduğunu ve diğer güvenlik kavramlarıyla nasıl ilişkili olduğunu** anlamaya çalışıyorum.
+Amacım yalnızca bir kavramın tanımını öğrenmek değil; kavramın **neden önemli olduğunu, nasıl çalıştığını ve diğer güvenlik konularıyla nasıl ilişkilendiğini** anlamaktır.
 
 ---
 
 # ⚠️ Etik ve Güvenlik
 
-Bu repository'deki çalışmaların temel amacı **eğitim ve savunma amaçlı siber güvenlik öğrenimidir.**
+Bu repository'deki çalışmaların temel amacı eğitim, araştırma ve savunma odaklı siber güvenlik öğrenimidir.
 
-Uygulamalı çalışmalar başladığında testlerin yalnızca:
+Uygulamalı çalışmalar yalnızca:
 
 * Yetkili sistemlerde
 * Belirlenmiş kapsam içerisinde
-* Kontrollü ortamlarda
+* Kontrollü laboratuvar ortamlarında
 * İzin verilen yöntemlerle
 
-gerçekleştirilmesi gerektiğini esas alıyorum.
+gerçekleştirilmelidir.
 
-> **Bilgi sahibi olmak ile bu bilgiyi nerede ve nasıl kullanmaya yetkili olmak farklı şeylerdir.**
+Özellikle Metasploitable 2 çalışması **izole bir VirtualBox Internal Network** üzerinde gerçekleştirilmiştir.
+
+> Bilgi sahibi olmak ile bu bilgiyi nerede ve nasıl kullanmaya yetkili olmak farklı şeylerdir.
 
 ---
 
 # 👩‍💻 Hakkımda
 
-Ben **Zeynep Ulucan**, Fırat Üniversitesi **Adli Bilişim Mühendisliği** öğrencisiyim.
+Ben **Zeynep Ulucan**, Fırat Üniversitesi Adli Bilişim Mühendisliği öğrencisiyim.
 
 Siber güvenlik alanında kendimi geliştirirken özellikle:
 
@@ -557,7 +640,7 @@ Siber güvenlik alanında kendimi geliştirirken özellikle:
 * ☁️ Cloud Security
 * 📱 Mobile Security
 
-alanlarını keşfediyor ve bu alanların kesişim noktalarını anlamaya çalışıyorum.
+alanlarını öğreniyor ve bu alanların birbirleriyle olan ilişkilerini anlamaya çalışıyorum.
 
 Bu repository, siber güvenlik alanındaki öğrenme sürecimin teknik bir günlüğü ve zaman içerisinde gelişen portföy çalışmalarımın bir parçasıdır.
 
@@ -565,30 +648,30 @@ Bu repository, siber güvenlik alanındaki öğrenme sürecimin teknik bir günl
 
 # 🚀 Hedefim
 
-Bu repository'nin zaman içerisinde yalnızca teorik notlardan oluşan bir arşiv olarak kalmasını istemiyorum.
+Bu repository'nin yalnızca teorik notlardan oluşan bir arşiv olarak kalmasını istemiyorum.
 
-Hedefim;
+Hedeflediğim çalışma modeli:
 
 ```text
-Öğren
+Learn
   ↓
-Araştır
+Research
   ↓
-Dokümante Et
+Document
   ↓
-Uygula
+Practice
   ↓
-Analiz Et
+Analyze
   ↓
-Proje Geliştir
+Build
   ↓
-Teknik Portföy Oluştur
+Improve
+  ↓
+Technical Portfolio
 ```
 
-şeklinde ilerleyerek teorik bilgiyi gerçek teknik becerilere dönüştürmek.
+Öğrendiğim teorik bilgileri kontrollü laboratuvarlar ve teknik projelerle destekleyerek zaman içerisinde gerçek dünyadaki güvenlik problemlerini analiz edebilecek bir teknik altyapı oluşturmaya çalışıyorum.
 
 ---
 
-<p align="center">
-  <b>🔐 Learn. Analyze. Secure. Repeat.</b>
-</p>
+## 🔐 Learn. Analyze. Secure. Repeat.
