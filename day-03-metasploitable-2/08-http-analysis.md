@@ -257,6 +257,95 @@ Web sunucularında aşağıdaki güvenlik önlemleri uygulanmalıdır:
 7. Kullanılan yazılımların güvenlik güncellemeleri ve bilinen CVE kayıtları takip edilmelidir.
 
 ---
+## Web Uygulaması Bileşenleri ve Güvenlik Önemi
+
+Bir web uygulaması yalnızca web sunucusundan oluşmaz. Kullanıcıların etkileşim kurduğu farklı bileşenler de uygulamanın saldırı yüzeyinin bir parçasıdır.
+
+Bu nedenle bir web uygulaması incelenirken yalnızca Apache veya PHP sürümüne değil, uygulamanın sunduğu işlevlere de dikkat edilmelidir.
+
+### Login
+
+Login bileşeni kullanıcı kimlik doğrulamasını gerçekleştirir.
+
+Güvenlik açısından aşağıdaki konular önemlidir:
+
+* Kimlik doğrulama mekanizmasının güvenli olması
+* Parolaların güvenli şekilde saklanması
+* Yetkisiz kullanıcıların giriş yapmasının engellenmesi
+* Oturum yönetiminin güvenli olması
+
+Kimlik doğrulama veya oturum yönetimindeki hatalar yetkisiz erişime neden olabilir.
+
+### Search
+
+Search bileşeni kullanıcı tarafından girilen arama verilerini sunucuya iletir.
+
+Kullanıcı girdisinin güvenli şekilde işlenmemesi çeşitli saldırılara neden olabilir. Bu nedenle arama alanları kullanıcı girdilerinin nasıl işlendiği açısından incelenmelidir.
+
+### File Upload
+
+Dosya yükleme işlevi kullanıcıların sunucuya dosya göndermesine izin verir.
+
+Dosya türü, boyutu, içeriği ve yüklenen dosyanın nerede saklandığı yeterince kontrol edilmezse kötü amaçlı veya istenmeyen dosyaların sunucuya yüklenmesi mümkün olabilir.
+
+### URL Parameters
+
+URL parametreleri uygulamaya kullanıcı tarafından gönderilen verilerdir.
+
+Örneğin:
+
+```text
+http://example.com/product?id=10
+```
+
+adresindeki `id=10` bir URL parametresidir.
+
+Bu tür kullanıcı girdilerinin güvenli şekilde doğrulanması ve işlenmesi gerekir. Hatalı kontroller farklı web güvenlik problemlerine yol açabilir.
+
+### API
+
+API'ler farklı uygulama veya istemcilerin web uygulamasıyla veri alışverişi yapmasını sağlar.
+
+API güvenliğinde özellikle:
+
+* Kimlik doğrulama
+* Yetkilendirme
+* Veri erişim kontrolleri
+* Girdi doğrulama
+* Hassas verilerin korunması
+
+önemlidir.
+
+### Admin Panel
+
+Admin paneli, uygulamanın yönetim işlevlerine erişim sağlar.
+
+Bu nedenle normal kullanıcıların yönetici işlevlerine erişememesi ve yönetici panelinin uygun şekilde korunması gerekir.
+
+Yetkisiz bir kullanıcının yönetim işlevlerine erişebilmesi sistem üzerinde önemli değişiklikler yapılmasına neden olabilir.
+
+### Genel Değerlendirme
+
+Web uygulamasının saldırı yüzeyi aşağıdaki şekilde düşünülebilir:
+
+```text
+Web Sunucusu
+      ↓
+Web Uygulaması
+      ↓
+Login ─ Search ─ Upload
+      ↓
+URL Parameters ─ API
+      ↓
+Admin Panel
+      ↓
+Veri ve Sistem Kaynakları
+```
+
+Bu bileşenlerin her biri farklı güvenlik kontrolleri gerektirebilir.
+
+Bu nedenle web güvenlik değerlendirmesinde yalnızca açık portların ve yazılım sürümlerinin belirlenmesi yeterli değildir. Uygulamanın sunduğu işlevlerin ve kullanıcı girdilerinin nasıl işlendiğinin de incelenmesi gerekir.
+
 
 ## 12. Sonuç
 
