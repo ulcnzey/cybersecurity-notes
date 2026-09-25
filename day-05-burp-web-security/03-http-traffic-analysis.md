@@ -64,6 +64,9 @@ POST /api/...
 
 gibi istekleri görebilirim.
 
+<img width="680" height="601" alt="image" src="https://github.com/user-attachments/assets/647439de-1a2c-4759-ade5-e48bab99639a" />
+
+
 ---
 
 ## 3. Repeater
@@ -94,6 +97,8 @@ Cevabı incele
 
 Repeater özellikle manuel web güvenlik testlerinde kullanışlıdır.
 
+<img width="682" height="576" alt="image" src="https://github.com/user-attachments/assets/cf115912-76f3-4396-8775-02a1a4fc6597" />
+
 ---
 
 ## 4. Intruder
@@ -109,6 +114,8 @@ Intruder, bir HTTP isteğindeki belirli alanlara farklı değerler göndererek t
 Bir parametrenin farklı değerlerde nasıl davrandığını incelemek veya çok sayıda kontrollü isteği otomatik olarak göndermek için kullanılabilir.
 
 Repeater'dan farkı, Repeater'da istekleri daha çok manuel olarak tekrar gönderirken Intruder'ın belirlenen alanlara farklı değerleri sistematik olarak uygulayabilmesidir.
+
+<img width="682" height="588" alt="image" src="https://github.com/user-attachments/assets/63120fb1-9851-4a7f-8c79-bbaad66684f0" />
 
 ---
 
@@ -131,6 +138,8 @@ Burada önemli bir nokta öğrendim:
 **Encoding ile encryption aynı şey değildir.**
 
 Örneğin Base64 bir şifreleme yöntemi değildir. Kodlanmış veri tekrar decode edilebilir.
+
+<img width="682" height="401" alt="image" src="https://github.com/user-attachments/assets/25858e87-874b-4866-8726-f2bfb6b737d3" />
 
 ---
 
@@ -164,6 +173,8 @@ Response B
 ```
 
 Özellikle uzun HTTP cevaplarında farklılıkları daha kolay fark etmeme yardımcı olur.
+
+<img width="678" height="597" alt="image" src="https://github.com/user-attachments/assets/589cbc26-7c77-499b-b62f-f4d70d34cd29" />
 
 ---
 
