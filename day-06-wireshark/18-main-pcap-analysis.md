@@ -1,4 +1,4 @@
-# 19. Main PCAP Analysis
+# 18. Main PCAP Analysis
 
 ## 1. Amaç
 
@@ -20,7 +20,7 @@ Bu çalışmanın amacı, daha önce ayrı ayrı öğrendiğim protokollerin ger
 
 Ana PCAP kaydını Kali Linux üzerinde, Wireshark kullanarak `eth1` arayüzünden oluşturdum.
 
-### Ağ bilgileri
+### Ağ Bilgileri
 
 * Kali Linux IP: `10.0.3.15`
 * Yerel hedef: `10.0.3.2`
@@ -31,13 +31,15 @@ Tüm trafik kontrollü laboratuvar ortamında oluşturuldu.
 
 ---
 
-# 3. ICMP Trafik Analizi
+## 3. ICMP Trafik Analizi
 
-İlk olarak hedef sistem ile bağlantıyı test etmek için aşağıdaki komutu kullandım:
+İlk olarak hedef sistem ile bağlantıyı test etmek için:
 
 ```bash
 ping -c 4 10.0.3.2
 ```
+
+komutunu kullandım.
 
 Ping sonucunda 4 paket gönderildi ve 4 paket alındı.
 
@@ -98,17 +100,17 @@ bilgisini göstermektedir.
 10.0.3.15
 ```
 
-Bu trafik, hedef sistem ile ağ seviyesinde iletişim kurulabildiğini göstermektedir.
-
 ---
 
-# 4. TCP Trafik Analizi
+## 4. TCP Trafik Analizi
 
-TCP trafiği oluşturmak için aşağıdaki komutu kullandım:
+TCP trafiği oluşturmak için:
 
 ```bash
 curl http://10.0.3.2
 ```
+
+komutunu kullandım.
 
 Bağlantı kurulamadı:
 
@@ -119,7 +121,7 @@ Could not connect to server
 
 Wireshark üzerinde `tcp.port == 80` filtresini kullanarak oluşan TCP paketlerini inceledim.
 
-## Frame 105 — SYN
+### Frame 105 — SYN
 
 ```text
 105  155.143139122
@@ -132,9 +134,7 @@ Seq=0
 
 Bu paket TCP bağlantısını başlatmak için gönderilen SYN paketidir.
 
-Kali sistemi `10.0.3.2` üzerindeki 80 numaralı TCP portuna bağlantı kurmaya çalışmıştır.
-
-## Frame 106 — SYN Retransmission
+### Frame 106 — SYN Retransmission
 
 ```text
 106  156.154209541
@@ -146,7 +146,7 @@ TCP
 
 İlk SYN paketine beklenen cevap gelmediği için SYN paketi tekrar gönderilmiştir.
 
-## Frame 107 — RST, ACK
+### Frame 107 — RST, ACK
 
 ```text
 107  157.146121930
@@ -176,11 +176,9 @@ Bu durumda TCP bağlantısı tamamlanmamıştır.
     X TCP bağlantısı kurulamadı
 ```
 
-Bu örnek, TCP bağlantısının her zaman başarılı şekilde kurulmadığını ve Wireshark üzerinde SYN, retransmission ve RST gibi davranışların gözlemlenebildiğini göstermektedir.
-
 ---
 
-# 5. UDP Trafik Analizi
+## 5. UDP Trafik Analizi
 
 Ana PCAP içerisinde UDP trafiğini de oluşturdum.
 
@@ -188,15 +186,7 @@ UDP, TCP'den farklı olarak bağlantı kurulumu gerçekleştirmeden veri aktarı
 
 Özellikle DNS ve DHCP gibi protokollerde UDP kullanıldığını gözlemledim.
 
-Wireshark üzerinde:
-
-```text
-udp
-```
-
-filtresini kullanarak UDP paketlerini inceledim.
-
-Örnek olarak daha önce yakalanan DHCP trafiğinde:
+Örnek olarak yakaladığım DHCP trafiğinde:
 
 ```text
 10.0.3.15 → 10.0.3.2
@@ -207,13 +197,11 @@ DHCP Request
 
 şeklinde bir UDP trafiği gözlemledim.
 
-Ana PCAP içerisinde UDP trafiğinin bulunması, TCP dışındaki iletişim biçimlerini de incelememe imkan sağladı.
-
 ---
 
-# 6. DNS Trafik Analizi
+## 6. DNS Trafik Analizi
 
-DNS trafiğini oluşturmak ve incelemek için:
+DNS trafiğini incelemek için:
 
 ```bash
 nslookup example.com
@@ -229,9 +217,7 @@ DNS sunucusu olarak:
 
 kullanıldı.
 
-Wireshark üzerinde `dns` filtresi ile DNS paketlerini inceledim.
-
-## Frame 49 — DNS Query
+### Frame 49 — DNS Query
 
 ```text
 49  144.545663434
@@ -244,15 +230,9 @@ A contile.services.mozilla.com
 
 Bu paket Kali sistemimin DNS sunucusuna `contile.services.mozilla.com` alan adının IPv4 adresini sorduğunu göstermektedir.
 
-Buradaki:
+Buradaki `A` kayıt tipi IPv4 adresi sorgulamak için kullanılır.
 
-```text
-A
-```
-
-kayıt tipi IPv4 adresi sorgulamak için kullanılır.
-
-## Frame 51 — DNS Response
+### Frame 51 — DNS Response
 
 ```text
 51  144.641998327
@@ -277,9 +257,7 @@ mozilla.map.fastly.net
 
 ilişkisini döndürmüştür.
 
-Aynı şekilde başka bir DNS sorgusunda:
-
-## Frame 50 — DNS Query
+### Frame 50 — DNS Query
 
 ```text
 50  144.564829468
@@ -290,7 +268,7 @@ Standard query 0xe891
 A spocs.getpocket.com
 ```
 
-## Frame 53 — DNS Response
+### Frame 53 — DNS Response
 
 ```text
 53  144.706749992
@@ -303,11 +281,11 @@ CNAME mozilla.map.fastly.net
 A 199.232.17.91
 ```
 
-Bu iki örnekte DNS Transaction ID değerlerini kullanarak sorgu ve cevap paketlerini eşleştirebildim.
+Bu örneklerde DNS Transaction ID değerlerini kullanarak sorgu ve cevap paketlerini eşleştirdim.
 
 ---
 
-# 7. HTTP Trafik Analizi
+## 7. HTTP Trafik Analizi
 
 HTTP trafiği oluşturmak için:
 
@@ -325,9 +303,7 @@ success
 
 sonucunu aldım.
 
-Wireshark üzerinde `http` filtresini kullanarak HTTP trafiğini inceledim.
-
-## Frame 243 — HTTP Request
+### Frame 243 — HTTP Request
 
 ```text
 243  741.088260147
@@ -337,7 +313,7 @@ HTTP
 GET /success.txt HTTP/1.1
 ```
 
-Paket detaylarında aşağıdaki HTTP bilgilerini gördüm:
+Paket detaylarında:
 
 ```http
 GET /success.txt HTTP/1.1
@@ -346,7 +322,7 @@ User-Agent: curl/8.15.0
 Accept: */*
 ```
 
-### HTTP Request Bilgileri
+bilgilerini gördüm.
 
 | Alan             | Değer                      |
 | ---------------- | -------------------------- |
@@ -359,15 +335,9 @@ Accept: */*
 | Destination IP   | `199.232.17.91`            |
 | Destination Port | `80`                       |
 
-Wireshark ayrıca bu isteğin cevabının:
+Wireshark bu isteğin cevabının **Frame 245** olduğunu gösterdi.
 
-```text
-Response in frame: 245
-```
-
-olduğunu göstermiştir.
-
-## Frame 245 — HTTP Response
+### Frame 245 — HTTP Response
 
 ```text
 245  741.154392263
@@ -384,9 +354,7 @@ HTTP/1.1 200 OK
 Content-Type: text/plain
 ```
 
-şeklinde cevap vermiştir.
-
-Bu nedenle HTTP iletişiminde hem request hem de response paketlerini gözlemleyebildim.
+şeklinde cevap verdi.
 
 ### HTTP Akışı
 
@@ -402,7 +370,7 @@ Kali                                      Web Server
 
 ---
 
-# 8. Genel Trafik Özeti
+## 8. Genel Trafik Özeti
 
 Ana PCAP içerisinde farklı protokollerin farklı amaçlarla kullanıldığını gözlemledim.
 
@@ -414,17 +382,15 @@ Ana PCAP içerisinde farklı protokollerin farklı amaçlarla kullanıldığın�
 | DNS      | Query / Response         | Frame 49-51   |
 | HTTP     | GET / 200 OK             | Frame 243-245 |
 
-Bu trafiklerin birlikte incelenmesi, tek bir protokole bakmak yerine ağ iletişimini farklı katmanlarda değerlendirmemi sağladı.
+Bu trafiklerin birlikte incelenmesi, ağ iletişimini farklı protokoller üzerinden değerlendirmemi sağladı.
 
 ---
 
-# 9. Güvenlik Açısından Değerlendirme
+## 9. Güvenlik Açısından Değerlendirme
 
 Bu PCAP kontrollü laboratuvar ortamımda oluşturulduğu için gözlemlediğim trafiklerin büyük bölümü beklenen test trafiğidir.
 
 Bununla birlikte Wireshark üzerinde bazı davranışların güvenlik analizinde neden önemli olabileceğini gördüm.
-
-Örneğin:
 
 ### TCP SYN
 
@@ -448,38 +414,36 @@ ağ gecikmesi, paket kaybı veya cevap alınamaması gibi farklı nedenlerle ort
 [RST, ACK]
 ```
 
-kapalı/filtrelenmiş servisler veya bağlantı sorunları gibi normal durumlarda da görülebilir.
+kapalı veya filtrelenmiş servisler ve bağlantı sorunları gibi normal durumlarda da görülebilir.
 
 ### DNS
 
-DNS sorgularının kendisi normal ağ davranışıdır. Ancak güvenlik analizinde olağandışı domainler, yüksek DNS hacmi veya beklenmeyen DNS sunucuları gibi davranışlar ayrıca incelenebilir.
+DNS sorguları normal ağ davranışıdır. Ancak güvenlik analizinde olağandışı domainler, yüksek DNS hacmi veya beklenmeyen DNS sunucuları gibi davranışlar ayrıca incelenebilir.
 
 Bu nedenle tek bir pakete bakarak saldırı sonucu çıkarmak yerine kaynak, hedef, protokol, port, zamanlama ve trafik yoğunluğu gibi bilgilerin birlikte değerlendirilmesi gerektiğini öğrendim.
 
 ---
 
-# 10. Öğrendiğim Temel Noktalar
+## 10. Öğrendiğim Temel Noktalar
 
 Bu ana PCAP çalışması sırasında:
 
 * ICMP Echo Request ve Echo Reply paketlerini ayırt ettim.
 * TCP SYN ve SYN retransmission davranışını gözlemledim.
-* TCP RST, ACK paketinin bağlantı üzerindeki rolünü gördüm.
+* TCP RST, ACK paketinin rolünü gördüm.
 * UDP trafiğini TCP'den ayırdım.
 * DNS Query ve Response paketlerini Transaction ID ile eşleştirdim.
 * DNS A ve CNAME kayıtlarını inceledim.
 * HTTP GET isteğinin yapısını analiz ettim.
 * HTTP response içerisindeki `200 OK` durum kodunu gördüm.
-* Bir terminal komutunun ağ üzerinde oluşturduğu gerçek paketleri Wireshark üzerinden takip ettim.
+* Terminalde kullandığım komutların ağ üzerinde oluşturduğu gerçek paketleri Wireshark üzerinden takip ettim.
 
 ---
 
-# 11. Sonuç
+## 11. Sonuç
 
 Bu çalışmada kendi laboratuvar ortamımda oluşturduğum ana PCAP kaydını Wireshark kullanarak analiz ettim.
 
 Farklı protokollerin ağ üzerinde nasıl göründüğünü gerçek paketler üzerinden incelemek, teorik olarak öğrendiğim bilgileri paket seviyesinde anlamamı sağladı.
 
-Özellikle bir bağlantının veya isteğin sadece terminalde görünen sonucuna bakmak yerine, bunun arka planda hangi paketlerden oluştuğunu incelemenin ağ güvenliği analizi açısından önemli olduğunu gördüm.
-
-Bu çalışma ile bir PCAP dosyasındaki temel trafik türlerini tanımlama ve paketler arasındaki ilişkiyi kurma konusunda pratik yaptım.
+Özellikle bir işlemin sadece terminalde görünen sonucuna bakmak yerine, bunun arka planda hangi paketlerden oluştuğunu incelemenin ağ güvenliği analizi açısından önemli olduğunu gördüm.
